@@ -25,7 +25,8 @@ function Register() {
     e.preventDefault();
 
     try {
-      await api.post("/auth/register", formData);
+      const { data } = await api.post("/auth/register", formData);
+      localStorage.setItem("token", data.token);
 
       toast.success("Account created successfully");
       await fetchUser();

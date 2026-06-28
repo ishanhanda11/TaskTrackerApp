@@ -66,6 +66,7 @@ function Dashboard() {
     try {
       await api.post("/auth/logout");
 
+      localStorage.removeItem("token");
       setUser(null);
 
       navigate("/login");

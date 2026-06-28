@@ -22,9 +22,10 @@ function Login() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    
+
     try {
-      await api.post("/auth/login", formData);
+      const { data } = await api.post("/auth/login", formData);
+      localStorage.setItem("token", data.token);
 
       toast.success("Logged in successfully");
       await fetchUser();
