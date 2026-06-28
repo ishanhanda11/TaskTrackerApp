@@ -10,7 +10,7 @@ const createTaskSchema = z.object({
   description: z
     .string()
     .trim()
-    .max(2000, "Description cannot exceed 500 characters")
+    .max(2000, "Description cannot exceed 2000 characters")
     .optional(),
 
   status: z
