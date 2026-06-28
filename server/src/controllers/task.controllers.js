@@ -3,7 +3,7 @@ const { createTaskSchema, updateTaskSchema } = require("../schema/taskSchema");
 
 /**
  * @route   GET /api/tasks
- * @desc    Get all tasks for the logged-in user
+ * @desc    Get all tasks for athe logged-in user
  * @access  Private
  */
 const getTasks = async (req, res) => {
